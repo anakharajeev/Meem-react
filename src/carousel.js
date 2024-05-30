@@ -2,6 +2,7 @@ import React from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Item } from './components/Item';
 
 const settings = {
   autoplay: true,          
@@ -166,45 +167,22 @@ const ServiceCarousel = () => {
   return (
     <div className="service-carousel">
       <Slider {...settings1}>
-        <div className="item">
-          <div className="service-box" style={{ backgroundImage: 'url(../img/service/3.jpg)' }}>
-            <div className="service-content">
-              <h2>Electromechanical Projects</h2>
-              <p>Our electromechanical services stand as a testament to our commitment to innovation and excellence. We undertake comprehensive electromechanical projects, integrating mechanical and electrical components seamlessly, ensuring optimum functionality and reliability. We focus on delivering solutions that are efficient, sustainable, and tailored to meet the unique requirements of the oil and gas sector.</p>
-              <a href="service-details.html">
-                <button className="btn-curve btn-lit readmore-btn sm-btn wow">
-                  <span>Read More</span>
-                </button>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="item">
-          <div className="service-box" style={{ backgroundImage: 'url(img/service/2.jpg)' }}>
-            <div className="service-content">
-              <h2>Equipment Design</h2>
-              <p>Our expertise in equipment design is unrivaled. We engineer cutting-edge equipment solutions that are robust, reliable, and tailored to meet the specific needs of our clients. We emphasize precision and innovation, developing equipment that not only meets the rigorous demands of the industry but also enhances operational efficiency and productivity.</p>
-              <a href="service-details.html">
-                <button className="btn-curve btn-lit readmore-btn sm-btn wow">
-                  <span>Read More</span>
-                </button>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="item">
-          <div className="service-box" style={{ backgroundImage: 'url(img/service/1.jpg)' }}>
-            <div className="service-content">
-              <h2>Engineering</h2>
-              <p>MEEM prides itself on offering expert engineering services. Our seasoned team of engineers is dedicated to providing industry-focused, globally competitive, and cost-effective solutions. Leveraging advanced engineering principles, we address the unique challenges of the oil and gas industry, ensuring our clients receive the highest levels of service quality and satisfaction.</p>
-              <a href="service-details.html">
-                <button className="btn-curve btn-lit readmore-btn sm-btn wow">
-                  <span>Read More</span>
-                </button>
-              </a>
-            </div>
-          </div>
-        </div>
+        <Item 
+        heading='Electromechanical Projects'
+        details='Our electromechanical services stand as a testament to our commitment to innovation and excellence. We undertake comprehensive electromechanical projects, integrating mechanical and electrical components seamlessly, ensuring optimum functionality and reliability. We focus on delivering solutions that are efficient, sustainable, and tailored to meet the unique requirements of the oil and gas sector.'
+        backgroundImage='../img/service/3.jpg'
+        />
+          <Item 
+        heading='Equipment Design'
+        details='Our expertise in equipment design is unrivaled. We engineer cutting-edge equipment solutions that are robust, reliable, and tailored to meet the specific needs of our clients. We emphasize precision and innovation, developing equipment that not only meets the rigorous demands of the industry but also enhances operational efficiency and productivity.'
+        backgroundImage='../img/service/2.jpg'
+        />
+          <Item 
+        heading='Engineering'
+        details='MEEM prides itself on offering expert engineering services. Our seasoned team of engineers is dedicated to providing industry-focused, globally competitive, and cost-effective solutions. Leveraging advanced engineering principles, we address the unique challenges of the oil and gas industry, ensuring our clients receive the highest levels of service quality and satisfaction.'
+        backgroundImage='../img/service/1.jpg'
+        />
+       
       </Slider>
     </div>
   );

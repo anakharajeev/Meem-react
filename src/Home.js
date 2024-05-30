@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { BannerCarousel, ServiceCarousel, ProductCarousel } from './carousel';
+import { BannerCarousel, ServiceCarousel, ProductCarousel } from './Carousel';
 
 const Home = () => {
   return (
